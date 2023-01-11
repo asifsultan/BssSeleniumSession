@@ -35,8 +35,7 @@ public class WindowsHandleDemo {
 				}
 				else if(driver.getTitle().equals("Explore / Twitter")) {
 					driver.findElement(By.xpath("//a[@href='/login']")).click();
-					////////To stop the execution of the loop/////////////////
-					break;
+					
 				}
 					
 					
