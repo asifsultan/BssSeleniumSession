@@ -22,7 +22,7 @@ public class RadioButtons {
 		
 		if(radioYes.isSelected()) {
 			System.out.println("Yes is selected");
-		}else {
+		}else if(radioNo.isSelected()){
 			System.out.println("No is selected");
 		}
 		
