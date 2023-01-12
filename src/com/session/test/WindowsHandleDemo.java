@@ -5,6 +5,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class WindowsHandleDemo {
 	
@@ -12,7 +13,10 @@ public class WindowsHandleDemo {
 		
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
 
+		
+		
 		WebDriver driver = new ChromeDriver();
+
 		driver.manage().window().maximize();
 		driver.get("https://automationteststore.com/");
 		
@@ -29,6 +33,7 @@ public class WindowsHandleDemo {
 			//System.out.println( window);
 			if(!window.equals(currentWindow)) {
 				driver.switchTo().window(window);
+				
 				if(driver.getTitle().equals("Facebook – log in or sign up")){
 					driver.findElement(By.id("email")).sendKeys("someone@somedomain.com");
 					driver.findElement(By.id("pass")).sendKeys("password");
